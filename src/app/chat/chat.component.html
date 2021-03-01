@@ -1,0 +1,22 @@
+<ng-container *ngIf="!gotUsersList">
+  <mat-progress-spinner mode="indeterminate">Loading</mat-progress-spinner>
+</ng-container>
+
+<ng-container *ngIf="gotUsersList">
+  <div class="row">
+    <div class="col-3">
+      <app-chat-list-users [userList]="usersList"></app-chat-list-users>
+    </div>
+    <div class="window">
+      <ul class="message-list">
+        <li *ngFor="let message of messages" class="message-list-item">
+          <span class="time">{{ message.timestamp | date: "hh:mm:ss" }}</span>
+          <span class="user-name">{{ message.userName }}</span>
+          <span class="message-text">{{ message.text }}</span>
+        </li>
+      </ul>
+      <input type="text" class="message" (keydown)="sendMessage($event, message.value)" #message>
+    </div>
+  </div>
+
+</ng-container>

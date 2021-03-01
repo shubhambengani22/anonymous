@@ -1,0 +1,7 @@
+<div class="container form form-group">
+  Name :
+  <label for="name">
+    <input class="form-control" name="name" id="name" type="text" #name>
+  </label><br>
+  <button class="btn-primary submit" (click)="submitHandler(name.value)">Submit</button>
+</div>

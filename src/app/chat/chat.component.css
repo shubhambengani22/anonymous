@@ -1,0 +1,32 @@
+.message{
+  position: relative;
+  bottom: 1%;
+  width: 100%;
+  margin-left: 1%;
+  padding: 0.5%;
+  overflow-x: hidden;
+}
+
+ul.message-list {
+  height: 93%;
+  overflow: auto;
+  list-style: none;
+  margin-left: 1%;
+  padding: 0;
+}
+
+li.message-list-item {
+  padding: 10px 0;
+}
+
+li.message-list-item:nth-child(odd) {
+  background: #efefef;
+}
+
+span{
+  margin-right: 1%;
+}
+
+.window{
+  width: 67%;
+}

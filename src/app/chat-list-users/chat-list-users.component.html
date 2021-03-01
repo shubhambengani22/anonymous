@@ -1,0 +1,14 @@
+<div>
+  <ng-container *ngIf="usersPresent">
+    <ul>
+      <ng-container *ngFor="let user of userList">
+        <li>
+          {{ user.name }}
+        </li>
+      </ng-container>
+    </ul>
+  </ng-container>
+  <ng-container *ngIf="!usersPresent">
+    No users found
+  </ng-container>
+</div>
